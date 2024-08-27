@@ -25,7 +25,7 @@ const wordle = {
                 
                 if (word.length === wordle.constants.wordSize) {
                     wordle.state.attempts.push(word);
-                    const isCorrect = await wordle.helpers.checkAnswer(word, currentRow);
+                    const isCorrect = wordle.helpers.checkAnswer(word, currentRow);
                     
                     if (isCorrect) {
                         wordle.elements.successMessage.classList.remove('hidden');
